@@ -1,0 +1,867 @@
+/* Desktop */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* animations */
+.anim-scale:hover {
+    transform: scale(.9);
+}
+
+@keyframes anim-heberg {
+    0% {
+        left: -950px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+/* anim-pop */
+@keyframes anim-pop {
+    0% {
+        right: -950px;
+    }
+
+    100% {
+        right: 10px;
+    }
+}
+
+/* .anim-hobbies */
+
+@keyframes anim-hobbies {
+    0% {
+        bottom: -500px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+/* loader */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background: #fff;
+    font-family: 'Work Sans', "Times New Roman", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Raleway', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-size: 22px;
+    margin-top: 63px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    margin-left: 67px;
+}
+
+a:hover {
+    color: #0065fc;
+}
+
+article {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+article:hover {
+    box-shadow: 3px 3px 5px rgba(0, 101, 252, 0.5);
+    cursor: pointer;
+}
+
+/* classes*/
+.loader-container {
+    position: absolute;
+    /* background: #D9D9D9; */
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.align-horiz {
+    display: flex;
+}
+
+.blue-star {
+    color: #0065fc;
+}
+
+.fa-solid {
+    margin-right: 10px;
+    color: #0065fc;
+}
+
+.grey-star {
+    color: #d9d9d9;
+}
+
+.button {
+    border: 3px solid #D9D9D9;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.button:hover {
+    background: #deebff;
+    cursor: pointer;
+}
+
+.article {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 23px 0 40px 0;
+}
+
+.section-horiz {
+    justify-content: space-between;
+}
+
+.title-section {
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 25px;
+}
+
+.title-section i {
+    color: #0065fc;
+    margin-right: 42px;
+}
+
+.fa-chart-line {
+    width: 15px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.activity-card {
+    height: 600px;
+    gap: 2%;
+}
+
+.block-activity {
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    height: 389px;
+    transition: .7s;
+    padding-bottom: 20px;
+    text-align: center;
+    justify-content: space-between;
+    background: #fff;
+    position: relative;
+    animation: 1s anim-hobbies .1s;
+    animation-fill-mode: forwards;
+}
+
+.block-activity:hover {
+    box-shadow: 3px 3px 5px rgba(0, 101, 252, 0.5);
+}
+
+.descrip{
+    transition: .7s;
+}
+
+/* structure */
+
+
+#content {
+    width: 1440px;
+    margin: auto;
+    padding-top: 60px;
+    animation: 1s loader .7s;
+    animation-fill-mode: forwards;/*Pour arrêter l’animation*/
+}
+
+#primary-header {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 19px;
+}
+
+#primary-nav {
+    justify-content: flex-end;
+    text-align: center;
+    width: calc(1440px - 91px);
+    transform: translate(0px, 30%);
+}
+
+#primary-nav ul {
+    display: inline-block;
+    flex-direction: row;
+    text-align: center;
+}
+
+#primary-nav li {
+    display: inline-block;
+    flex-direction: row;
+}
+
+#primary-nav li a:hover {
+    margin-top: 48px;
+    color: #0065fc;
+    border-top: solid 3px #0065fc;
+    padding-top: 48px;
+    margin-left: 67px;
+}
+
+#form {
+    position: relative;
+    top: 8px;
+    margin: 10px 0;
+    width: 332px;
+}
+
+#locali {
+    padding: 15px 18px;
+    background: #d9d9d9;
+    border-radius: 10px 0 0 10px;
+}
+
+#search {
+    width: 332px;
+    height: 50px;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+#submit {
+    background: #0065fc;
+    color: #fff;
+    border-radius: 0 20px 20px 0;
+    padding: 14px 16px;
+    cursor: pointer;
+}
+
+#filters {
+    margin-top: 46px;
+}
+
+/* selectionne tous les enfants de #filters => #filters :nth-child(n) */
+#filters p {
+    width: 54px;
+    margin-right: 84px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#filters ul li {
+    margin-right: 84px;
+}
+
+#filters>p {
+    padding: 10px 0;
+}
+
+#info {
+    margin-top: 40px;
+}
+
+#logo-info {
+    align-items: center;
+    padding: 0 8px;
+    border: #D9D9D9 1px solid;
+    border-radius: 50%;
+}
+
+#info p {
+    margin-left: 10px;
+}
+
+#info>p>img {
+    margin-right: 10px;
+    padding: 7px 10px;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+}
+
+/* hébergements */
+#hebergements {
+    position: relative;
+    display: block;
+    background: #d9d9d9;
+    flex-direction: row;
+    margin-top: 39px;
+    width: 880px;
+    height: 626px;
+    border-radius: 20px;
+    animation: 1s anim-heberg .1s;
+    animation-fill-mode: forwards;
+}
+
+#hebergements>h3 {
+    position: relative;
+    top: 40px;
+    left: 42px;
+    font-size: 22px;
+}
+
+#hebergements>div {
+    position: relative;
+    top: 23px;
+    padding: 23px;
+}
+
+#hebergements>div>article {
+    display: inline-block;
+    width: 246px;
+    height: 199px;
+    background: #fff;
+    padding: 3px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+#hebergements article figure img {
+    border-radius: 20px 20px 0 0;
+    padding: 3px;
+    width: 240px;
+    height: 124px;
+}
+
+#hebergements a {
+    position: relative;
+    bottom: 46px;
+    font-weight: 900;
+}
+
+/* populaires */
+#populaires {
+    background: #d9d9d9;
+    margin-top: 39px;
+    margin-left: 37px;
+    width: 420px;
+    height: 625px;
+    padding: 20px 20px;
+    border-radius: 20px;
+    position: relative;
+    animation: 1s anim-pop .1s;
+    animation-fill-mode: forwards;
+}
+
+#populaires>article {
+    display: inline-block;
+    width: 343px;
+    height: 144px;
+    background: #fff;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+#populaires article figure img {
+    border-radius: 20px 0 0 20px;
+    padding: 3px;
+    width: 137px;
+    height: 144px;
+}
+
+#populaires article h4 {
+    margin-top: 16px;
+}
+
+#populaires article p {
+    margin-top: 7px;
+}
+
+#populaires article p {
+    margin-bottom: 12px;
+}
+
+#populaires article ul {
+    bottom: 12px;
+}
+
+/* Activités */
+#hobbies {
+    width: 1440px;
+    height: 493px;
+}
+
+#hobbies h3 {
+    margin: 40px 0 30px 0;
+}
+
+#hobbies img {
+    position: relative;
+    right: 46px;
+    width: 302px;
+    height: 311px;
+    border-radius: 15px 15px 0 0;
+    max-width: 100%;
+}
+
+#hobbies h4 {
+    margin-top: 22px;
+}
+
+/* footer */
+#footer {
+    width: 1440px;
+    background: #d9d9d9;
+    height: 225px;
+    padding-top: 45px;
+    margin-left: 0;
+}
+
+#footer nav {
+    flex: 1;
+    margin-left: 70px;
+}
+
+footer h4 {
+    font-weight: 900;
+    font-size: 119%;
+    line-height: 50px;
+    /*hauteur de ligne*/
+}
+
+footer a {
+    left: -67px;
+    line-height: 30px;
+    color: #000;
+    margin-bottom: 58px;
+}
+
+
+
+
+
+
+
+/* Tablette */
+@media screen and (max-width:1024px) {
+
+    #content {
+        max-width: 1024px;
+        padding: 44px 72px 0 72px;
+    }
+
+    /***** filters******/
+    #filters .button {
+        margin-top: 10px;
+    }
+
+    #filters p {
+        display: flex;
+        font-size: 17px;
+        padding-top: 20px;
+    }
+
+    #filters ul li {
+        margin-right: 40px;
+    }
+
+    /****** hébergements******/
+    #hebergements h3 {
+        font-size: 119%;
+    }
+
+    .section-horiz {
+        display: block;
+        justify-content: center;
+    }
+
+    #hebergements div article p,
+    #hebergements figcaption h4 {
+        margin-left: 16px;
+    }
+
+    #hebergements ul {
+        margin-left: 16px;
+        padding-top: 11px;
+        font-size: 67%;
+    }
+
+    #hebergements img {
+        height: 120px;
+    }
+
+    /****** polpulaires******/
+    #populaires {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+        padding: 30px 5px;
+        border-radius: 20px;
+        height: 278px;
+    }
+
+    #populaires>article {
+        display: inline-flex;
+        flex-direction: row;
+        width: 270px;
+        height: 144px;
+        margin: 0 4px;
+    }
+
+    #populaires article img {
+        max-width: 137px;
+    }
+
+    #populaires article h4 {
+        font-size: 14px;
+    }
+
+    #populaires article p {
+        font-size: 13px;
+    }
+
+    #populaires article ul {
+        font-size: 67%;
+        bottom: 11px;
+    }
+
+    /****** hobbies******/
+    #hobbies {
+        width: 1024px;
+        height: 330px;
+        margin: 70px 0;
+    }
+
+    .activity-card {
+        width: 86%;
+        padding-left: 0;
+        justify-content: space-around;
+    }
+
+    .activity-card {
+        width: 86%;
+    }
+
+    #hobbies img {
+        left: -67px;
+        height: 210px;
+        width: 100%;
+    }
+
+    .block-activity {
+        margin-bottom: 20px;
+        width: 182px;
+        height: 267px;
+    }
+
+    #hobbies h4 {
+        margin-top: 7px;
+        font-size: 14px;
+    }
+
+    /****** footer******/
+    #footer {
+        width: 100%;
+    }
+
+    footer h4 {
+        font-weight: 900;
+        font-size: 18px;
+    }
+
+    footer a {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+/* Mobile */
+@media screen and (max-width:375px) {
+
+    #content {
+        box-sizing: content-box;
+        max-width: 375px;
+        margin: 0;
+        padding: 0;
+    }
+
+    /***** header*****/
+    #primary-header {
+        display: block;
+        margin-top: 21px;
+        border-bottom: 3px solid #d9d9d9;
+        padding-bottom: 60px;
+    }
+
+    #primary-header img {
+        display: block;
+        margin: auto;
+        width: 69px;
+        height: 19px;
+        padding-left: 4px;
+    }
+
+    #primary-nav {
+        max-width: 375px;
+    }
+
+    #primary-nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    #primary-nav ul li {
+        font-size: 16px;
+    }
+
+    #primary-nav ul li a {
+        padding: 36px;
+    }
+
+    #primary-nav li a:hover {
+        margin-top: 0;
+        color: #0065fc;
+        border-bottom: solid 3px #0065fc;
+        padding-bottom: 15px;
+    }
+
+
+    /***** barre de recherche *****/
+    #locali {
+        background-color: #d9d9d9;
+        border-radius: 10px 0 0 10px;
+        height: 50px;
+        width: 50px;
+        font-size: 100%;
+    }
+
+    #search {
+        height: 50px;
+        width: 210px;
+        font-weight: 600;
+        font-size: 100%;
+    }
+
+    /* #submit {
+        display: none;      
+    }
+
+    .submit {
+        content: "\f002";
+       justify-content: center;
+       align-items: center;
+       border-radius: 0 15px 15px 0;
+       background: #0065fc;
+       color: white;
+       cursor: pointer;
+       width: 50px;
+    } */
+
+    /*****filters******/
+    #filters {
+        margin: 34px 0 15px 0;
+        flex-wrap: wrap;
+    }
+
+    #filters ul {
+        flex-wrap: wrap;
+    }
+
+    #filters ul li {
+        width: 142px;
+    }
+
+    .button {
+        font-size: 11px;
+    }
+
+    /****info******/
+    #logo-info {
+        border: #d9d9d9 solid 2px;
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        color: #0065fc;
+    }
+
+    .section-inverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    /***** populaire*****/
+    #populaires {
+        background: #d9d9d9;
+        margin-top: 39px;
+        left: -137px;
+        width: 100%;
+        height: 580px;
+        border-radius: 0px;
+    }
+
+    #populaires>article {
+        display: inline-block;
+        width: 350px;
+        height: 144px;
+        background: #fff;
+        margin-bottom: 15px;
+        border-radius: 20px;
+    }
+
+    #populaires article figure img {
+        border-radius: 20px 0 0 20px;
+        padding: 3px;
+        width: 137px;
+        height: 144px;
+    }
+
+    #populaires article h4 {
+        margin-top: 12px;
+    }
+
+    #populaires article p {
+        margin-top: 12px;
+    }
+
+    #populaires article p {
+        margin-bottom: 12px;
+    }
+
+    #populaires article ul li {
+        margin-top: 50px;
+    }
+
+    #populaires article .populars-stars {
+        margin-top: -15px;
+    }
+
+    /***** hebergements*****/
+    #hebergements {
+        width: 100%;
+        padding: 5%;
+        height: 1430px;
+        background-color: #fff;
+    }
+
+    #hebergements .article {
+        width: 100%;
+        height: 199px;
+        background: #fff;
+        padding: 3px;
+        margin-bottom: 12px;
+        border-radius: 20px;
+    }
+
+    #hebergements .article-heb {
+        flex-direction: column;
+        width: 335px;
+        height: 199px;
+        background: #fff;
+        padding: 3px;
+        margin-bottom: 12px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+        transition: .7s;
+    }
+
+    #hebergements .article-heb:hover {
+        box-shadow: 3px 3px 5px rgba(0, 101, 252, 0.5);
+    }
+
+    #hebergements article figure img {
+        width: 334px;
+        height: 124px;
+    }
+
+    #hebergements a {
+        display: none;
+    }
+
+    #hebergements h3 {
+        margin-left: -55px;
+    }
+
+    /******hobbies*****/
+
+    #hobbies {
+        width: 375px;
+        height: 55rem;
+        margin: 70px 0;
+    }
+
+    #hobbies .activity-card {
+        display: block;
+        width: 90%;
+        padding-left: 0;
+        margin-bottom: 24px;
+        margin-left: 20px;
+    }
+
+    .activity-card {
+        width: 86%;
+        padding-left: 0;
+    }
+
+    #hobbies img {
+        left: -67px;
+        height: 134px;
+        width: 100%;
+    }
+
+    .block-activity {
+        margin-bottom: 24px;
+        width: 334px;
+        height: 190px;
+    }
+
+    #hobbies h4 {
+        margin-top: 7px;
+        font-size: 14px;
+    }
+
+    /****** footer*****/
+    #footer {
+        flex-direction: column;
+        height: 501px;
+        width: 100%;
+    }
+
+    footer h4 {
+        font-weight: 900;
+        font-size: 18px;
+    }
+
+    footer a {
+        font-size: 12px;
+    }
+}
