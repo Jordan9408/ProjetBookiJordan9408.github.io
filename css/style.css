@@ -105,6 +105,10 @@ article:hover {
     cursor: pointer;
 }
 
+label {
+    display:none;
+}
+
 /* classes*/
 .loader-container {
     position: absolute;
@@ -114,8 +118,8 @@ article:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 1s ease-in-out;
-
+    transition: opacity 1s;
+    z-index: -1;
 }
 
 .align-horiz {
@@ -203,8 +207,6 @@ article:hover {
 }
 
 /* structure */
-
-
 #content {
     width: 1440px;
     margin: auto;
