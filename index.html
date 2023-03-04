@@ -16,9 +16,7 @@
 </head>
 
 <body>
-    <div class="loader-container">
-        <div class="dot d1"></div>
-    </div>
+
     <div id="content">
         <header>
             <div id="primary-header" class="align-horiz">
@@ -39,6 +37,8 @@
                 <label for="search">Recherche une ville</label>
                 <input type="search" id="search" name="search" value="Marseille, France">
                 <input type="submit" id="submit" value="Recherche">
+                <button id="submit-mobile" type="submit" class="icone-loupe"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             <div id="filters" class="align-horiz">
                 <p>Filtres</p>
@@ -64,98 +64,110 @@
                         <article class="article-heb anim-scale align-horiz">
                             <figure>
                                 <img src="img/auberge-la-canebière.jpg" alt="Auberge La Canebière">
-                                <figcaption>
-                                    <h4>Auberge La Canebière</h4>
-                                </figcaption>
+                                <div class="description">
+                                    <figcaption>
+                                        <h4>Auberge La Canebière</h4>
+                                    </figcaption>
+                                    <p>Nuit à partir de 25 &euro;</p>
+                                    <ul class="align-horiz">
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star grey-star stars-size"></i></li>
+                                    </ul>
+                                </div>
                             </figure>
-                            <p>Nuit à partir de 25 &euro;</p>
-                            <ul class="align-horiz">
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star grey-star stars-size"></i></li>
-                            </ul>
                         </article>
                         <article class="article-heb anim-scale align-horiz">
                             <figure>
                                 <img src="img/hotel-du-port.jpg" alt="Hôtel du port">
-                                <figcaption>
-                                    <h4>Hôtel du port</h4>
-                                </figcaption>
+                                <div class="description">
+                                    <figcaption>
+                                        <h4>Hôtel du port</h4>
+                                    </figcaption>
+                                    <p>Nuit à partir de 52 &euro;</p>
+                                    <ul class="align-horiz">
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star grey-star stars-size"></i></li>
+                                    </ul>
+                                </div>
                             </figure>
-                            <p>Nuit à partir de 52 &euro;</p>
-                            <ul class="align-horiz">
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star grey-star stars-size"></i></li>
-                            </ul>
                         </article>
                         <article class="article-heb anim-scale align-horiz">
                             <figure>
                                 <img src="img/hotel-les-mouettes.jpg" alt="Hôtel les mouettes">
-                                <figcaption>
-                                    <h4>Hôtel les mouettes</h4>
-                                </figcaption>
+                                <div class="description">
+                                    <figcaption>
+                                        <h4>Hôtel les mouettes</h4>
+                                    </figcaption>
+                                    <p>Nuit à partir de 76 &euro;</p>
+                                    <ul class="align-horiz">
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star grey-star stars-size"></i></li>
+                                    </ul>
+                                </div>
                             </figure>
-                            <p>Nuit à partir de 76 &euro;</p>
-                            <ul class="align-horiz">
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star grey-star stars-size"></i></li>
-                            </ul>
                         </article>
                         <article class="article-heb anim-scale align-horiz">
                             <figure>
                                 <img src="img/hotel-de-la-mer.jpg" alt="Hôtel de la mer">
-                                <figcaption>
-                                    <h4>Hôtel de la mer</h4>
-                                </figcaption>
+                                <div class="description">
+                                    <figcaption>
+                                        <h4>Hôtel de la mer</h4>
+                                    </figcaption>
+                                    <p>Nuit à partir de 46 &euro;</p>
+                                    <ul class="align-horiz">
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star grey-star stars-size"></i></li>
+                                    </ul>
+                                </div>
                             </figure>
-                            <p>Nuit à partir de 46 &euro;</p>
-                            <ul class="align-horiz">
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star grey-star stars-size"></i></li>
-                            </ul>
                         </article>
                         <article class="article-heb anim-scale align-horiz">
                             <figure>
                                 <img src="img/auberge-le-panier.jpg" alt="Auberge Le Panier">
-                                <figcaption>
-                                    <h4>Auberge Le Panier</h4>
-                                </figcaption>
+                                <div class="description">
+                                    <figcaption>
+                                        <h4>Auberge Le Panier</h4>
+                                        <p>Nuit à partir de 23 &euro;</p>
+                                    </figcaption>
+                                    <ul class="align-horiz">
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star grey-star stars-size"></i></li>
+                                    </ul>
+                                </div>
                             </figure>
-                            <p>Nuit à partir de 23 &euro;</p>
-                            <ul class="align-horiz">
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star grey-star stars-size"></i></li>
-                            </ul>
                         </article>
                         <article class="article-heb anim-scale align-horiz">
                             <figure>
                                 <img src="img/hotel-chez-amina.jpg" alt="Hôtel Chez Amina">
-                                <figcaption>
-                                    <h4>Hôtel Chez Amina</h4>
-                                </figcaption>
+                                <div class="description">
+                                    <figcaption>
+                                        <h4>Hôtel Chez Amina</h4>
+                                    </figcaption>
+                                    <p>Nuit à partir de 96 &euro;</p>
+                                    <ul class="align-horiz">
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star blue-star"></i></li>
+                                        <li><i class="fa-solid fa-star grey-star stars-size"></i></li>
+                                    </ul>
+                                </div>
                             </figure>
-                            <p>Nuit à partir de 96 &euro;</p>
-                            <ul class="align-horiz">
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star blue-star"></i></li>
-                                <li><i class="fa-solid fa-star grey-star stars-size"></i></li>
-                            </ul>
                         </article>
                     </div>
                     <a href="#">Afficher plus</a>
